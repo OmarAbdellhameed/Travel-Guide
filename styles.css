@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Rubik+Wet+Paint&display=swap');
+
+
+/*
+* reset css styles
+:root to state some variables to use in whole css
+. to declare a class
+# to declare an ID
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #221314;
+    --second-color: #5a7184;
+    --main-color: blue;
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+}
+ 
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+table {
+    margin-bottom: 100px;
+    border: 1px solid;
+    width: 80%;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+td, th {
+    text-align: center;
+    vertical-align:middle;
+    padding: 15px;
+}
+
+
+td:hover {
+    background-color: #679392;
+}
+table a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+table a:visited{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.Cities-title {
+    font-size: var(--big-font);
+    color: #C98D10;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 250px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.Cities-list {
+    margin-left: 100px;
+    color: #734401;
+    margin-bottom: 20px;
+}
+
+
+.images {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* vh means view height in this case it means to take whole screen */
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.Cities-Page {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* vh means view height in this case it means to take whole screen */
+    background: url(./assets/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.city-contents {
+    width: 100%;
+    height: 750px;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.city-contents h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.city-contents img {
+    width: 500px;
+    height: 500px;
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.header-page .logo {
+    color: var(--text-color);
+}
+
+.header-page .nav-bar a {
+    color: var(--text-color);
+}
+
+
+.header-page {
+    background-color: #e5e5cc;
+    padding: 10px 18%;
+    box-shadow: rgba(33, 55, 38, 0.1) 0px 30px 30px -30px;
+}
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;  /* Padding 30 pixel top and 18% right */
+    transition: ease 0.7s;
+}
+
+section {
+    padding: 80px 18%   /* Padding 30 pixel top and 18% right */
+
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* vh means view height in this case it means to take whole screen */
+    background: url(./assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.page {
+    background: beige;
+}
+
+
+
+
+.home-text h1{
+    font-size: var(--big-font);
+    line-height: 1.2;
+    color: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.home-btn {
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    margin-left: 150px;
+    margin-top: 25px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    border-radius: 10px;
+    transition: ease 0.7s;
+}
+
+.home-btn:hover {
+    background: var(--bg-color);
+    transform: scale(1.15);
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--bg-color);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a {
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    padding: 10px 22px;
+    transition: ease 0.7s;
+    margin-left: 25px;
+    border-radius: 50px;
+}
+
+.nav-bar a:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 50px;
+    box-shadow: 5px 7px 30px grey; /* 5px top 10px right 30px blur*/
+}
+
+
+#menu-icon {
+    color: var(--bg-color);
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+    z-index: 10001;
+}
+
+
+.container {        /* To contain all 3 places content inside*/
+    width: 80%;
+    max-width: 1000px;
+    margin-left: 18%;
+    margin-top: 50px;
+}
+
+.place-card { /* Cards in cities that contain shadow */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.place-title {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.location-button {
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 30px;
+    margin-top: 25px;
+    background: black;
+    color: var(--bg-color);
+    border-radius: 10px;
+    transition: ease 0.7s;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+
+.location-button:hover {
+    background: black;
+    transform: scale(1.15);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.place-image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.place-description {
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+
+.container p {
+    font-size: 20px;
+}
+
+
+.about-name-card{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 250px;
+    width: 350px;
+    margin: 25px;
+  }
+  
+  
+ .about-name-card p{
+     position: absolute;
+     left: 4%;
+     bottom: 10%;
+ }
